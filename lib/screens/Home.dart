@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
     return Scaffold(
         resizeToAvoidBottomInset : false,
         appBar: AppBar(
-            title: Text('RajKumar Flutter Demo'),
+            title: Text('RajKumar Machine Task'),
             automaticallyImplyLeading: false),
         body: Center(
             child: Column(

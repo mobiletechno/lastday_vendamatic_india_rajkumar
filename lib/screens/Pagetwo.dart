@@ -68,7 +68,7 @@ class _PagetwoState extends State<Pagetwo> {
               height: height,
               color: Colors.blue,
               child: Center(child: InkWell(
-                child: Text("Button 1", style: TextStyle(color: Colors.white,  fontSize: 20)),
+                child: Text("Network", style: TextStyle(color: Colors.white,  fontSize: 20)),
                 onTap: () {
                   Checkconnection();
                   print("button1 pressed------------");
@@ -78,7 +78,7 @@ class _PagetwoState extends State<Pagetwo> {
             ),
             feedback: Container(
               child: Center(
-                child: Text("Button1",style: Theme.of(context).textTheme.headline,),),
+                child: Text("Network",style: Theme.of(context).textTheme.headline,),),
               color: Colors.red[800],
               width: width,
               height: height,
@@ -101,7 +101,7 @@ class _PagetwoState extends State<Pagetwo> {
               height: heightbt2,
               color: Colors.blue,
               child: Center(child: InkWell(
-                child: Text("Button 2", style: TextStyle(color: Colors.white,  fontSize: 20)),
+                child: Text("Gps", style: TextStyle(color: Colors.white,  fontSize: 20)),
                 onTap: () {
                   print("button2 pressed------------");
 
@@ -113,7 +113,7 @@ class _PagetwoState extends State<Pagetwo> {
             ),
             feedback: Container(
               child: Center(
-                child: Text("Button2", style: Theme.of(context).textTheme.headline,),),
+                child: Text("Gps", style: Theme.of(context).textTheme.headline,),),
               color: Colors.red[800],
               width: widthbt2,
               height: heightbt2,
