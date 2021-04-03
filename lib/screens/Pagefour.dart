@@ -1,38 +1,24 @@
-
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
-// import 'package:toast/toast.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-
-
+import 'package:vendamatic_india_rajkumar/utils/Constants.dart';
 
 class Pagefour extends StatefulWidget {
-
-
-
-
   @override
   _PagefourState createState() => _PagefourState();
 }
 
 class _PagefourState extends State<Pagefour> {
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-
-
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Page four"),
-
+        title: Text(Constants.PAGE4),
         centerTitle: true,
       ),
       body: Center(
@@ -41,20 +27,18 @@ class _PagefourState extends State<Pagefour> {
           children: <Widget>[
             MaterialButton(
               onPressed: () {
-                int sum=50000*50000;
+                int sum = 50000 * 50000;
                 Fluttertoast.showToast(
-                    msg: "50000*50000=$sum",
+                    msg: "500000*500000=$sum",
                     toastLength: Toast.LENGTH_SHORT,
                     gravity: ToastGravity.BOTTOM,
                     timeInSecForIosWeb: 1,
                     backgroundColor: Colors.red,
                     textColor: Colors.white,
-                    fontSize: 16.0
-                );
-                // Toast.show("50000*50000=$sum", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
+                    fontSize: 16.0);
               },
               elevation: 20,
-              child: Text('Calculate'),
+              child: Text(Constants.CALC),
               color: Colors.blue,
               textColor: Colors.white,
             ),
@@ -63,7 +47,7 @@ class _PagefourState extends State<Pagefour> {
               onPressed: () {
                 Opendialog(context);
               },
-              child: Text('Getimage'),
+              child: Text(Constants.CLOUDIMAGE),
               color: Colors.blue,
               textColor: Colors.white,
             ),
@@ -71,7 +55,6 @@ class _PagefourState extends State<Pagefour> {
         ),
       ),
     );
-
   }
 
   void Opendialog(BuildContext context) {
@@ -83,50 +66,69 @@ class _PagefourState extends State<Pagefour> {
                 borderRadius: BorderRadius.circular(20.0)), //this right here
             child: Container(
               height: 200,
-
               child: Padding(
                 padding: const EdgeInsets.all(12.0),
-                child : Column(
-
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-
-            IconButton(
-              icon: const Icon(Icons.close),
-              tooltip: 'close dialog',
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-
-
-                    Container(
-                      width: 120,
-                    height: 120,
-
-                    child :Image.network(
-                      'https://firebasestorage.googleapis.com/v0/b/vendomatic-88c12.appspot.com/o/images%2Fnature.jpg?alt=media&token=12ee3055-f6a8-4153-a87d-dbaff730ac08',
-                    )),
-                Container(
-                  width: 120,
-                  height: 120,
-                  child :Image.network(
-                      'https://firebasestorage.googleapis.com/v0/b/vendomatic-88c12.appspot.com/o/images%2Fnature-hd-background-22.jpg?alt=media&token=f15cded9-9d1f-472f-8986-1b91deb9a44e',
-                    ))
-
-
+                    IconButton(
+                      icon: const Icon(Icons.close),
+                      tooltip: Constants.CLOSEDIAOG,
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 120,
+                          height: 120,
+                          child: Image.network(
+                            Constants.FIREBASEURL1,
+                            loadingBuilder: (BuildContext context, Widget child,
+                                ImageChunkEvent loadingProgress) {
+                              if (loadingProgress == null) return child;
+                              return Center(
+                                child: CircularProgressIndicator(
+                                  value: loadingProgress.expectedTotalBytes !=
+                                          null
+                                      ? loadingProgress.cumulativeBytesLoaded /
+                                          loadingProgress.expectedTotalBytes
+                                      : null,
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                        Container(
+                          width: 120,
+                          height: 120,
+                          child: Image.network(
+                            Constants.FIREBASEURL2,
+                            loadingBuilder: (BuildContext context, Widget child,
+                                ImageChunkEvent loadingProgress) {
+                              if (loadingProgress == null) return child;
+                              return Center(
+                                child: CircularProgressIndicator(
+                                  value: loadingProgress.expectedTotalBytes !=
+                                          null
+                                      ? loadingProgress.cumulativeBytesLoaded /
+                                          loadingProgress.expectedTotalBytes
+                                      : null,
+                                ),
+                              );
+                            },
+                          ),
+                        )
+                      ],
+                    ),
                   ],
                 ),
-                ],
               ),
             ),
-          ),
           );
         });
-
   }
 }

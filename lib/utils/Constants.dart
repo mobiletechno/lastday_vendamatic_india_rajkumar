@@ -1,0 +1,31 @@
+class Constants {
+  static String HOME='Home';
+  static String BUTTON1='Button 1';
+  static String BUTTON2='Button 2';
+  static String BUTTON3='Button 3';
+  static String BUTTON4='Button 4';
+  static String REGISTER='Register';
+  static String INPUTNAME='Enter your name';
+  static String OKAY='Okay';
+  static String GREATERTHREE='User name should be greater than 3';
+  static String PAGE4='Page four';
+  static String PAGE2='Page two';
+  static String PAGE3='Page three';
+  static String PAGE1='Page one';
+  static String CLOUDIMAGE='Cloud image';
+  static String CLOSEDIAOG='Close Dialog';
+  static String FIREBASEURL1='https://firebasestorage.googleapis.com/v0/b/vendomatic-88c12.appspot.com/o/images%2Fnature.jpg?alt=media&token=12ee3055-f6a8-4153-a87d-dbaff730ac08';
+  static String CALC='Calculate';
+  static String FIREBASEURL2='https://firebasestorage.googleapis.com/v0/b/vendomatic-88c12.appspot.com/o/images%2Fnature-hd-background-22.jpg?alt=media&token=f15cded9-9d1f-472f-8986-1b91deb9a44e';
+  static String WELCOME='WELCOME';
+  static String SERIALNO='Serial No';
+  static String BOOKNAME='Book Name';
+  static String TABLE='Table';
+  static String CATEGORY='Category';
+  static String NETWORK='Network';
+  static String GPS='Gps';
+  static String NOTCONNECT='Network is not Connected';
+  static String MOBILEDATA='Mobile Data is Connected';
+  static String WIFI='"WIFI Data is Connected';
+  static String ONGPS='GPS is ON';
+}

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:vendamatic_india_rajkumar/screens/Home.dart';
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 void _enablePlatformOverrideForDesktop() {
   if (!kIsWeb && (Platform.isWindows || Platform.isLinux)) {
     debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
@@ -14,6 +15,10 @@ void _enablePlatformOverrideForDesktop() {
 void main() {
   runApp(MyApp());
   _enablePlatformOverrideForDesktop();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown
+  ]);
 }
 
 class MyApp extends StatelessWidget {

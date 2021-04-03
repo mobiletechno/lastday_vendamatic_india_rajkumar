@@ -1,22 +1,16 @@
 import 'package:animated_rotation/animated_rotation.dart';
-
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
+import 'package:vendamatic_india_rajkumar/utils/Constants.dart';
 
 class Pageone extends StatefulWidget {
   String getusername;
-
   Pageone(this.getusername);
-
   @override
   _PageoneState createState() => _PageoneState();
 }
 
 class _PageoneState extends State<Pageone> {
-  // Membuat List Dari data Internet
   int _angle = 0;
-
-  //Panggil Data / Call Data
   @override
   void initState() {
     // TODO: implement initState
@@ -27,7 +21,7 @@ class _PageoneState extends State<Pageone> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Page one"),
+        title: Text(Constants.PAGE1),
         centerTitle: true,
       ),
       body: Center(
@@ -35,7 +29,7 @@ class _PageoneState extends State<Pageone> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
             Text(
-              "WELCOME",
+              Constants.WELCOME,
               style: TextStyle(color: Colors.blue, fontSize: 20),
             ),
             AnimatedRotation(
@@ -46,8 +40,11 @@ class _PageoneState extends State<Pageone> {
                   onTap: () {
                     Rotateanimation();
                   },
-                ))
-          ])),
+                )
+            )
+          ]
+          )
+      ),
     );
   }
 
@@ -60,11 +57,8 @@ class _PageoneState extends State<Pageone> {
 
   void delay() {
     Future.delayed(const Duration(milliseconds: 500), () {
-// Here you can write your code
-
       setState(() {
         _angle = -360;
-        // Here you can write your code for open new view
       });
     });
   }

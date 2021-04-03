@@ -1,118 +1,110 @@
 import 'package:flutter/material.dart';
-// import 'package:toast/toast.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:vendamatic_india_rajkumar/screens/Pagefour.dart';
-
 import 'package:vendamatic_india_rajkumar/screens/Pageone.dart';
 import 'package:vendamatic_india_rajkumar/screens/Pagethree.dart';
 import 'package:vendamatic_india_rajkumar/screens/Pagetwo.dart';
+import 'package:vendamatic_india_rajkumar/utils/Constants.dart';
 
 class Home extends StatelessWidget {
   TextEditingController usernameController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        resizeToAvoidBottomInset : false,
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
-            title: Text('RajKumar Machine Task'),
-            automaticallyImplyLeading: false),
+            title: Text(Constants.HOME), automaticallyImplyLeading: false),
         body: Center(
             child: Column(
-              children: <Widget>[
-                Expanded(
-                    child: Container(
-                        width: double.infinity,
-                        child: Column(
-                          children: <Widget>[
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height / 2,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.blueAccent,
-                                  //remove color to make it transpatent
-                                ),
-                                child: Center(
-                                    child: Column(
-                                        mainAxisAlignment:
-                                        MainAxisAlignment.spaceAround,
-                                        children: <Widget>[
-                                          MaterialButton(
-                                            onPressed: () {
-                                              Opendialog(context);
-                                            },
-                                            elevation: 20,
-                                            child: Text('Button 1'),
-                                            color: Colors.red,
-                                            textColor: Colors.white,
-                                          ),
-                                          MaterialButton(
-                                            onPressed: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          Pagetwo()));
-                                            },
-                                            elevation: 20,
-                                            child: Text('Button 2'),
-                                            color: Colors.red,
-                                            textColor: Colors.white,
-                                          ),
-                                        ])),
-                              ),
+          children: <Widget>[
+            Expanded(
+                child: Container(
+                    width: double.infinity,
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height / 2,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              //remove color to make it transpatent
                             ),
-                            Expanded(
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    color: Colors.red,
-                                    //remove color to make it transpatent
-                                    border: Border.all(
-                                        style: BorderStyle.solid,
-                                        color: Colors.red)),
-                                child: Center(
-                                    child: Column(
-                                        mainAxisAlignment:
+                            child: Center(
+                                child: Column(
+                                    mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
-                                        children: <Widget>[
-                                          MaterialButton(
-                                            onPressed: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          Pagethree()));
-                                            },
-                                            elevation: 20,
-                                            child: Text('Button 3'),
-                                            color: Colors.blue,
-                                            textColor: Colors.white,
-                                          ),
-                                          MaterialButton(
-                                            onPressed: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (context) =>
-                                                          Pagefour()));
-                                            },
-                                            elevation: 20,
-                                            child: Text('Button 4'),
-                                            color: Colors.blue,
-                                            textColor: Colors.white,
-                                          ),
-                                        ]
-                                    )
-                                ),
-                              ),
-                            )
-                          ],
+                                    children: <Widget>[
+                                  MaterialButton(
+                                    onPressed: () {
+                                      Opendialog(context);
+                                    },
+                                    elevation: 20,
+                                    child: Text(Constants.BUTTON1),
+                                    color: Colors.red,
+                                    textColor: Colors.white,
+                                  ),
+                                  MaterialButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Pagetwo()));
+                                    },
+                                    elevation: 20,
+                                    child: Text(Constants.BUTTON2),
+                                    color: Colors.red,
+                                    textColor: Colors.white,
+                                  ),
+                                ])),
+                          ),
+                        ),
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.red,
+                                //remove color to make it transpatent
+                                border: Border.all(
+                                    style: BorderStyle.solid,
+                                    color: Colors.red)),
+                            child: Center(
+                                child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
+                                    children: <Widget>[
+                                  MaterialButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Pagethree()));
+                                    },
+                                    elevation: 20,
+                                    child: Text(Constants.BUTTON3),
+                                    color: Colors.blue,
+                                    textColor: Colors.white,
+                                  ),
+                                  MaterialButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  Pagefour()));
+                                    },
+                                    elevation: 20,
+                                    child: Text(Constants.BUTTON4),
+                                    color: Colors.blue,
+                                    textColor: Colors.white,
+                                  ),
+                                ])),
+                          ),
                         )
-                    )
-                ),
-              ],
-            )
-        )
-    );
+                      ],
+                    ))),
+          ],
+        )));
   }
 
   void Opendialog(BuildContext context) {
@@ -130,7 +122,7 @@ class Home extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text('Register',
+                    Text(Constants.REGISTER,
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
@@ -139,18 +131,17 @@ class Home extends StatelessWidget {
                       controller: usernameController,
                       decoration: InputDecoration(
                           border: InputBorder.none,
-                          hintText: 'Enter your name'),
+                          hintText: Constants.INPUTNAME),
                     ),
                     SizedBox(
                       width: 320.0,
                       child: RaisedButton(
                         onPressed: () {
-                          String getusername= usernameController.text;
-                          Validateusername(getusername,context);
-
+                          String getusername = usernameController.text;
+                          Validateusername(getusername, context);
                         },
                         child: Text(
-                          "Okay",
+                          Constants.OKAY,
                           style: TextStyle(color: Colors.white),
                         ),
                         color: const Color(0xFF1BC0C5),
@@ -165,37 +156,27 @@ class Home extends StatelessWidget {
   }
 
   void Validateusername(String getusername, BuildContext context) {
-    if(getusername.length<3 && !getusername.isEmpty)
+    if (getusername.length < 3 && !getusername.isEmpty)
       Fluttertoast.showToast(
-          msg: "User name should be greater than 3",
+          msg: Constants.GREATERTHREE,
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
           backgroundColor: Colors.red,
           textColor: Colors.white,
-          fontSize: 16.0
-      );
-      // Toast.show("User name should be greater than 3", context, duration: Toast.LENGTH_LONG, gravity:  Toast.CENTER);
-    else if(getusername.isEmpty)
+          fontSize: 16.0);
+    else if (getusername.isEmpty)
       Fluttertoast.showToast(
-          msg: "enter the name",
+          msg: Constants.INPUTNAME,
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.BOTTOM,
           timeInSecForIosWeb: 1,
           backgroundColor: Colors.red,
           textColor: Colors.white,
-          fontSize: 16.0
-      );
-      // Toast.show("enter the name", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
-    else{
-      Navigator.push(
-          context,
-          MaterialPageRoute(
-              builder: (context) =>
-                  Pageone(getusername)));
+          fontSize: 16.0);
+    else {
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => Pageone(getusername)));
     }
-
-
-
   }
 }
