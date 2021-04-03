@@ -13,7 +13,6 @@ class _PagefourState extends State<Pagefour> {
     // TODO: implement initState
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +36,6 @@ class _PagefourState extends State<Pagefour> {
                     textColor: Colors.white,
                     fontSize: 16.0);
               },
-     
               child: Text(Constants.CALC),
               color: Colors.blue,
               textColor: Colors.white,
@@ -55,7 +53,6 @@ class _PagefourState extends State<Pagefour> {
       ),
     );
   }
-
   void Opendialog(BuildContext context) {
     showDialog(
         context: context,
