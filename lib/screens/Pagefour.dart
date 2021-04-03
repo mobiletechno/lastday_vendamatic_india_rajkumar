@@ -25,7 +25,7 @@ class _PagefourState extends State<Pagefour> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            MaterialButton(
+            FlatButton(
               onPressed: () {
                 int sum = 50000 * 50000;
                 Fluttertoast.showToast(
@@ -37,13 +37,12 @@ class _PagefourState extends State<Pagefour> {
                     textColor: Colors.white,
                     fontSize: 16.0);
               },
-              elevation: 20,
+     
               child: Text(Constants.CALC),
               color: Colors.blue,
               textColor: Colors.white,
             ),
-            MaterialButton(
-              elevation: 20,
+            FlatButton(
               onPressed: () {
                 Opendialog(context);
               },
